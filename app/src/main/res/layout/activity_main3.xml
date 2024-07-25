@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 主界面布局 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- 主界面中的视图 -->
+        <ImageView
+            android:id="@+id/music_log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/music_log"
+            android:layout_marginTop="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/music_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音乐社区"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@id/music_log"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/music_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="听你想听"
+            android:letterSpacing="0.18"
+            app:layout_constraintTop_toBottomOf="@id/music_text1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 要叠加显示的布局 -->
+    <LinearLayout
+        android:id="@+id/overlayLayout"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center">
+
+        <!-- 叠加布局中的视图 -->
+        <TextView
+            android:id="@+id/toask_text1"
+            android:layout_width="240dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="声明与条款"
+            android:textSize="21dp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/toask_text2"
+            android:layout_width="240dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:text="欢迎使用音乐社区，我们将严格遵守相关法律和隐私政策保护您的个人隐私，请您阅读并同意《用户协议》与《隐私政策》。"
+            android:onClick="onLinkClicked"/>
+
+        <TextView
+            android:id="@+id/toask_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="不同意"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/toask_button1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="同意并使用"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="#3482FF"/>
+    </LinearLayout>
+
+</FrameLayout>
