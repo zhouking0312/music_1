@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".day2.BlankFragment1">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/musicfragment_image"
+        android:layout_gravity="center"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/image"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/musicfragment_rec">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</FrameLayout>

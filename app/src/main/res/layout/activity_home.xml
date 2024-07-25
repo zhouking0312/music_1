@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Home">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintVertical_bias="0.0"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="搜索"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="请输入想要搜索的内容"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/button1"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_rec"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/music_view">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/music_view"
+        android:background="#FFFAFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/musicfragment_image"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/music_view"
+        app:layout_constraintBottom_toBottomOf="@id/music_view"
+        />
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:text="歌曲名"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/musicfragment_image"
+        app:layout_constraintTop_toTopOf="@id/music_view"
+        app:layout_constraintBottom_toBottomOf="@id/music_view"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/a_name"
+        android:text="作者名"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toRightOf="@id/name"
+        app:layout_constraintTop_toTopOf="@id/music_view"
+        app:layout_constraintBottom_toBottomOf="@id/music_view"/>
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/all_list"
+        android:background="@drawable/all_list"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/music_play"
+        app:layout_constraintTop_toTopOf="@id/music_view"
+        app:layout_constraintBottom_toBottomOf="@id/music_view"/>
+
+    <ImageView
+        android:id="@+id/music_play"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/music_play2"
+        android:layout_marginRight="120dp"
+        app:layout_constraintBottom_toBottomOf="@+id/music_view"
+        app:layout_constraintTop_toTopOf="@+id/music_view"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

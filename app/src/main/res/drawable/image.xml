@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/circle_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- 设置填充颜色 -->
+    <solid android:color="#ffffff"/> <!-- 白色背景 -->
+    <!-- 设置边框线 -->
+    <stroke android:color="#000000" android:width="2dp"/> <!-- 黑色边框，宽度2dp -->
+</shape>
